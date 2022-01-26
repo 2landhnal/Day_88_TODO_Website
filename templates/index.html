@@ -1,0 +1,96 @@
+
+{% include "header.html" %}
+  <body>
+    <section class='header'>
+      <div class="container-fluid">
+
+        <nav class='navbar navbar-expand-lg navbar-light fixed-top' id="mainNav">
+          <a class="navbar-brand" href="{{ url_for('home') }}" >
+            <img src="{{ url_for('static', filename='fire.png') }}" width="90" height="90" class="d-inline-block align-center" alt="">
+            2land
+          </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                {% if not current_user.is_authenticated: %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('register')}}">Register</a>
+                </li>
+                {% else: %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link" href="https://2landhnal.github.io/2land/">About</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+      </div>
+    </section>
+
+    <section class='bodi'>
+
+      <div class="add-bar ">
+        <div class="container-fluid">
+
+          {% if current_user.is_authenticated: %}
+         <form method="post" action={{url_for('home')}}>
+            <div class="form-group">
+              <h2>Add new TODO</h2>
+              <input class="form-control w-100" name="todo"  type="text" data-sb-validations="required">
+            </div>
+            <button class="add-btn btn btn-lg btn-block btn-primary text-uppercas" id="submitButton" type="submit">Submit</button>
+          </form>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row card-deck">
+
+          {% if not current_user.is_authenticated: %}
+            <div class="card box p-5 border-0 shadow-lg  ">
+              <p>17/1/2022</p>
+              <h3>CLorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+              <a href="#" class='mt-auto finish-btn w-100 btn btn-lg btn-block btn-primary'>Finished</a>
+            </div>
+          {% endif %}
+
+          {% if current_user.is_authenticated: %}
+          {% for todo in todos: %}
+
+            {% if todo.finished: %}
+            <div class="card box p-5 border-0 shadow-lg " style="{{todo.color}}">
+            {% else: %}
+            <div class="card box p-5 border-0 shadow-lg">
+            {% endif %}
+              <p>{{ todo.date }}</p>
+              <h3>{{ todo.todo }}</h3>
+              {% if todo.finished: %}
+              <a href="{{ url_for('finished', id=todo.id, method='post') }}" class='mt-auto finish-btn w-100 btn btn-lg btn-block btn-light disabled'>Finished</a>
+              {% else: %}
+              <a href="{{ url_for('finished', id=todo.id, method='post') }}" class='mt-auto finish-btn w-100 btn btn-lg btn-block btn-primary'>Finish</a>
+              {% endif %}
+              <a href="{{ url_for('delete', id=todo.id, method='post') }}" class='mt-auto finish-btn w-100 btn btn-lg btn-block btn-danger'>Delete</a>
+            </div>
+
+          {% endfor %}
+          {% endif %}
+
+        </div>
+      </div>
+
+    </section>
+{% include "footer.html" %}

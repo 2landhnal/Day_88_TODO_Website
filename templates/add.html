@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{super()}}
+<link rel="icon" href={{url_for('static', filename="favicon.ico")}}>
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='styles.css')}}">
+{% endblock %}
+
+{% block title %}Add TODO{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="content">
+        <h2>Add new TODO</h2>
+            {{ form.csrf_token }}
+            {{ wtf.quick_form(form, novalidate=True, action=url_for('add'), method="post") }}
+    </div>
+</div>
+{% endblock %}

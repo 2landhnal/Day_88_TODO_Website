@@ -1,0 +1,27 @@
+
+{% include "header.html" %}
+  <body>
+       <form method="post" action={{url_for('login')}}>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                  <li style="color:red">{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+       <div class="container-fluid">
+          <div class="form-group">
+            <h2>Email</h2>
+            <input class="form-control w-100" name="email"  type="email" data-sb-validations="required">
+            <h2>Password</h2>
+            <input class="form-control w-100" name="password"  type="password" data-sb-validations="required">
+          </div>
+          <button class="add-btn btn btn-lg btn-block btn-primary text-uppercas" id="submitButton" type="submit">Submit</button>
+        </form>
+       </div>
+
+
+{% include "footer.html" %}
+
