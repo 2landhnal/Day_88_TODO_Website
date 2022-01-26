@@ -30,7 +30,7 @@ img {
  }
 /* Content */
 
-#submitButton {background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50  100%)}
+#submitButton {background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50  100%); border:0;}
 #submitButton {
 margin: 10px;
 padding: 15px 45px;
@@ -57,7 +57,7 @@ text-decoration: none;
 }
 @media (min-width: 601px) and (max-width: 1028px){
     .bodi {
-        margin-top:10%;
+        margin-top:20%;
     }
     .card {
       border-radius: 15px;
@@ -66,7 +66,7 @@ text-decoration: none;
     }
 }
 
-@media (min-width: 1028px) and (max-width: 2024px) {
+@media (min-width: 1028px) and (max-width: 1512px) {
     .bodi {
         margin-top:10%;
     }
