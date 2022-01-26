@@ -84,7 +84,6 @@ text-decoration: none;
 .finish-btn:hover {
   cursor: pointer;
   color: #1cb8aa;
-  border: 2px solid #1cb8aa;
   background: white;
 }
 .finish-btn {
