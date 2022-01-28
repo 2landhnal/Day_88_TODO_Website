@@ -57,10 +57,15 @@ colors = [
    'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
    'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
    'background-color: #4158D0; background-image: linear-gradient(19deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); color:white;',
-   'background-color: #85FFBD; background-image: linear-gradient(19deg, #85FFBD 0%, #FFFB7D 100%); color:white',
-   'background-color: #FFDEE9; background-image: linear-gradient(19deg, #FFDEE9 0%, #B5FFFC 100%); color:white',
    'background-color: #F4D03F; background-image: linear-gradient(19deg, #F4D03F 0%, #16A085 100%); color:white',
    'background-color: #74EBD5; background-image: linear-gradient(19deg, #74EBD5 0%, #9FACE6 100%); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(245,116,185,1) 14.7%, rgba(89,97,223,1) 88.7% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(201,37,107,1) 15.4%, rgba(116,16,124,1) 74.7% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% ); color:white',
+   'background-image: linear-gradient( 19deg,  rgba(24,138,141,1) 11.2%, rgba(96,221,142,1) 91.1% ); color:white',
 ]
 
 
