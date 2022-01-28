@@ -49,7 +49,7 @@ class Todo(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     author = relationship("User", back_populates='todos')
 
-db.create_all()
+# db.create_all()
 
 colors = [
    'background-color: #FA8BFF; background-image: linear-gradient(19deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); color:white;',
