@@ -52,12 +52,17 @@ class Todo(db.Model):
 db.create_all()
 
 colors = [
-    'background-color: #FA8BFF; background-image: linear-gradient(19deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); color:white;',
-    'background-color: #21D4FD; background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); color:white;',
-    'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
-    'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
-    'background-color: #4158D0; background-image: linear-gradient(19deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); color:white;',
+   'background-color: #FA8BFF; background-image: linear-gradient(19deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); color:white;',
+   'background-color: #21D4FD; background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); color:white;',
+   'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
+   'background-color: #FEE140; background-image: linear-gradient(19deg, #FEE140 0%, #FA709A 100%); color:white;',
+   'background-color: #4158D0; background-image: linear-gradient(19deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); color:white;',
+   'background-color: #85FFBD; background-image: linear-gradient(19deg, #85FFBD 0%, #FFFB7D 100%); color:white',
+   'background-color: #FFDEE9; background-image: linear-gradient(19deg, #FFDEE9 0%, #B5FFFC 100%); color:white',
+   'background-color: #F4D03F; background-image: linear-gradient(19deg, #F4D03F 0%, #16A085 100%); color:white',
+   'background-color: #74EBD5; background-image: linear-gradient(19deg, #74EBD5 0%, #9FACE6 100%); color:white',
 ]
+
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
