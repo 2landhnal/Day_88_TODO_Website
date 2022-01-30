@@ -57,6 +57,9 @@ text-decoration: none;
   margin: 3% 1%;
   width:23%;
 }
+.card:hover {
+  margin: 2.5% 1%;
+}
 @media (min-width: 768px) and (max-width: 1216px) {
     .bodi {
         margin-top:10%;
