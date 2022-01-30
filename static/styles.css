@@ -6,9 +6,9 @@ img {
   -webkit-filter: drop-shadow(5px 5px 5px #c8c9cc);
   filter: drop-shadow(5px 5px 5px #c8c9cc);
 }
-.body {
+body {
+  padding-top: 10%;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
 }
 .navbar-brand, h2 {
   font-family: 'Righteous', cursive;
@@ -24,10 +24,12 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#mainNav {
-  background: rgba(186, 214, 232, 0.27);
+.fixed-top {
+  background: rgba(255, 255, 255, 0.95);;
   border-bottom: 1px solid #e9ecef;
- }
+  padding: 1% 10%;
+  box-shadow: 0 0 20px rgba(197, 197, 197, 0.8);
+}
 /* Content */
 
 #submitButton {background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50  100%); border:0;}
