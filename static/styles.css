@@ -7,7 +7,10 @@ img {
   filter: drop-shadow(5px 5px 5px #c8c9cc);
 }
 body {
+  position: relative;
+  min-height: 100vh;
   padding-top: 10%;
+  padding-bottom: 35%;
   text-align: left;
 }
 .navbar-brand, h2 {
@@ -78,8 +81,8 @@ text-decoration: none;
     }
     .card {
       border-radius: 15px;
-      margin: 3% 18%;
-      width:70%;
+      margin: 3% 2.5%;
+      width:45%;
     }
 }
 .card:hover {
@@ -110,6 +113,9 @@ input {
   padding: 5% 0;
 }
 .footer {
+  width: 100%;
+  position:absolute;
+  bottom:0;
   text-align: center;
 }
 .fas {
